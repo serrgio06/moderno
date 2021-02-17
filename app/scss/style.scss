@@ -71,13 +71,13 @@
   &-title {
     margin-bottom: 10px;
     font-size: 48px;
-    font-weight: 700;
+    @include f700;
     line-height: 72px;
   }
   &-text {
     margin-bottom: 50px;
     font-size: 20px;
-    font-weight: 500;
+    @include f500;
     line-height: 30px;
   }
   &-form {
@@ -92,7 +92,7 @@
       height: 56px;
       border: none;
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
       padding-left: 25px;
       padding-right: 60px;
       &::placeholder {
@@ -157,7 +157,7 @@
     padding: 10px 30px;
     align-items: center;
     min-height: 90px;
-    font-weight: 500;
+    @include f500;
     border-bottom: 1px solid #e7ecf2;
   }
   &-name {
@@ -174,7 +174,7 @@
     color: $green;
   }
   &-price {
-    font-weight: 700;
+    @include f700;
     font-size: 20px;
     color: $bg;
   }
@@ -188,6 +188,7 @@
   &-author {
     display: flex;
     align-items: center;
+    max-width: 245px;
     .avatar {
       width: 30px;
       height: 30px;
@@ -200,7 +201,13 @@
     }
     span {
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
+    }
+  }
+  &-star {
+    font-size: 12px;
+    span {
+      color: $bg;
     }
   }
 }
@@ -218,6 +225,184 @@
 }
 
 //end products
+//start product-slider  
+
+.product-slider {
+  padding: 110px 0px 120px;
+  .slick-dots {
+    text-align: center;
+    margin-top: 50px;
+    li {
+      display: inline-block;
+      margin-left: 3px;
+      margin-right: 3px;
+      &.slick-active {
+        button {
+          background-color: $green;
+        }
+      }
+      button {
+        border-radius: 50%;
+        background-color: rgb(232, 232, 232);
+        border: none;
+        font-size: 0;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        outline: none;
+      }
+    }
+  }
+}
+//end product-slider
+  
+//start advanteges
+
+.advanteges {
+  background-color: $bg;
+  padding: 110px 0;
+}
+.advanteges__title {
+  color: white;
+}
+.advanteges__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.advanteges__item {
+  max-width: 370px;
+  text-align: center;
+  padding: 0px 15px;
+  &:hover {
+    .advanteges__item-images {
+      background-color: $green;
+    }
+    .advanteges__item-title {
+      color: $green;
+    }
+  }
+  &-images {
+    width: 114px;
+    height: 114px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 30px;
+    transition: all .3s;
+  }
+  &-title {
+    margin-bottom: 25px;
+    color: white;
+    font-size: 24px;
+    @include f500;
+    transition: all .3s;
+  }
+  &-text {
+    font-size: 15px;
+  }
+}
+.iconsvg-1 {
+  svg {
+    width: 70px;
+  }
+}
+.iconsvg-2 {
+  svg {
+    width: 70px;
+  }
+}
+.iconsvg-3 {
+  svg {
+    width: 70px;
+  }
+}
+//end advanteges
+//start author 
+
+.author {
+  background-image: url(../images/author-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__box {
+    max-width: 650px;
+    width: 100%;
+    min-height: 215px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $green;
+  }
+  &__title {
+    font-size: 30px;
+    line-height: 30px;
+    color: white;
+    margin-right: 45px;
+    max-width: 260px;
+    span {
+      @include f700
+    }
+  }
+  &__link {
+    font-size: 18px;
+    line-height: 36px;
+    padding: 14px 40px;
+    background-color: white;
+  }
+}
 
 
+
+
+//end author
+
+
+//tutorials start
+
+.tutorials {
+  padding: 60px 0px 120px 0px;
+  &__title {
+    margin-bottom: 80px;
+    font-size: 36px;
+    text-align: center;
+    @include f700;
+    color: $bg;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    max-width: 370px;
+    width: 100%;
+  }
+}
+.tutorials__item {
+  &-images {
+    min-height: 270px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+  }
+  &-title {
+    background-color: #f8f8f8;
+    font-size: 24px;
+    text-align: center;
+    @include f700;
+    padding: 30px 10px;
+    color: $bg;
+  }
+}
+
+
+
+
+//tutorials end
 
